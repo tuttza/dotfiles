@@ -1,0 +1,17 @@
+# Indentation
+# Indent with 2 spaces and make tabs appear as 2 spaces.
+set-option global tabstop 2
+set-option global indentwidth 2
+
+ # Highlighters
+add-highlighter global/number-lines number-lines
+add-highlighter global/show-matching show-matching
+add-highlighter global/show-whitespaces show-whitespaces
+add-highlighter global/show-matching
+
+# Live reload
+set-option global autoreload yes
+
+# Copy to MacOS clipboard
+map global user y '<a-|>xsel -i -b<ret>'
+
