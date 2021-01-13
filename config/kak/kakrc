@@ -3,18 +3,18 @@ set-option global tabstop 2
 set-option global indentwidth 2
 
  # Highlighters
-add-highlighter global/number-lines number-lines
+add-highlighter global/number-lines number-lines -hlcursor
 add-highlighter global/show-matching show-matching
-add-highlighter global/show-whitespaces show-whitespaces
-#add-highlighter global/show-matching
+#add-highlighter global/show-whitespaces show-whitespaces
 
 # Live reload
 set-option global autoreload yes
 
 # Copy to MacOS clipboard
-map global user y '<a-|>xsel -i -b<ret>'
-
+hook global NormalKey y|d|c %{ nop %sh{
+	printf %s "$kak_reg_dquote" | pbcopy
+}}
 
 # Editor Theme
-colorscheme zenburn
+colorscheme gruvbox
 
