@@ -14,9 +14,6 @@ my $current_dir = getcwd() . "/config";
 my %CONFIGS = (
   "$current_dir/kak/kakrc" => "$home/.config/kak/kakrc",
   "$current_dir/vimrc" => "$home/.vimrc",
-  #"$current_dir/tmux.conf" => "$home/.tmux.conf",
-  #"$current_dir/ssh_config" => "$home/.ssh/config",
-  #"$current_dir/nanorc" => "$home/.nanorc"
 );
 
 while( my($k, $v) = each %CONFIGS )
